@@ -1,7 +1,18 @@
 <div class="main">
-    <h1><%= t 'welcome' %></h1>
-    <%= image_tag "001.png", height: 300 %>
-    <p >Скоро буде )</p>
+    <div class="main_image">
+      <%= image_tag "001.png" %>
+    </div>
+    <div class="main_info">
+        <h1><%= t 'welcome' %></h1>
+        <p> <%= t 'info.first' %></p>
+        <p> <%= t 'info.history' %></p>
+        <p> <%= t 'info.stand' %></p>
+        <p> <%= t 'info.mission' %></p>
+        <p> <%= t 'info.meta' %></p>
+        <p> <%= t 'info.team' %></p>
+        <p> <%= t 'info.last' %></p>
+    </div>
+     
 </div>
 
 

@@ -1,0 +1,16 @@
+.header {
+    padding: 0 10px;
+    background-color: yellowgreen ;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+       
+        li {
+            list-style: none;
+        }
+    }
+}

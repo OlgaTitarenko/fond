@@ -15,7 +15,6 @@
 # gem "pg"
 #
 default: &default
-  adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
@@ -25,6 +24,7 @@ default: &default
 
 development:
   <<: *default
+  adapter: sqlite3
   database: fond_development
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -82,4 +82,5 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
   database: fond
