@@ -4,21 +4,21 @@ body {
     background-color: $main_background;
     padding: 0;
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Merriweather', serif;
 }
 
 .main {
     min-width: 100%;
     min-height: 100%;
-    background-color: gainsboro;
+    background-color: #7CBC92;
 
     &_image {
         widows: 100%;
         display: flex;
         justify-content: center;
         border-radius: 0px 0px 0px 180px;
-        background: linear-gradient(89.47deg, rgb(90, 167, 244) 45%, rgba(96,55,144,0.17) 99.78%); 
+        background: linear-gradient(89.47deg, #dec2ff 45%, #F4ABBE 99.78%); 
 
         img {
             width: 100%;
@@ -26,12 +26,23 @@ body {
         }
     }
     &_info {
-        padding: 20px;
-        h1, p {
-            text-align: center;
+        padding: 20px 20px 20px 60px;
+        display: flex;
+        align-items: flex-end;
+        color: white;
+      
+        img {
+            width: 100px;
         }
+    }
+    &_mission {
+        background-color: #dec2ff;
+        padding: 20px 20px 20px 60px;
+        display: flex;
+        justify-content: center;
+
         p {
-            padding: 0 10vh;
+            padding: 10px 20px;
         }
     }
 }

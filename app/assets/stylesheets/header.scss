@@ -1,6 +1,8 @@
+@import './variables.scss';
+
 .header {
     padding: 0 10px;
-    background-color: yellowgreen ;
+    background-color: $header;
 
     ul {
         display: flex;
