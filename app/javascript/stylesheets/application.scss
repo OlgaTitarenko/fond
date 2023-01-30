@@ -1,0 +1,60 @@
+// https://getbootstrap.com/docs/4.5/getting-started/theming/#variable-defaults
+// Your variable overrides
+// $body-bg: #000;
+// $body-color: #111;
+
+@import '~bootstrap/scss/bootstrap';
+@import 'colors';
+@import 'header';
+@import 'home';
+
+.textHeader {
+    font-size: 40px;
+}
+.textTitle {
+    font-size: 36px;
+}
+.textSubtitle {
+    font-size: 24px;
+}
+.textBody1 {
+    font-size: 15px;
+}
+.textBody2 {
+    font-size: 13px;
+}
+
+.button {
+    border-radius: 16px;
+    padding: 20px 32px;
+    background-color: $main-pink;
+    color: rgba(250, 245, 245, 0.9);
+
+    &:hover {
+        color: $text-white;
+        background-color: $secondary-pink;
+        box-shadow: 0px 8px 23px rgba(71, 43, 48, 0.25);
+    }
+    &:active {
+        color: $text-white;
+        background-color: $secondary-pink;
+    }
+
+}
+
+.button-secondary {
+    border: 1px solid $main-pink;
+    border-radius: 16px;
+    color: $main-pink;
+    padding: 20px 32px;
+
+    &:hover {
+        color: $text-white;
+        background-color: $main-pink;
+        box-shadow: 0px 8px 23px rgba(71, 43, 48, 0.25);
+    }
+    &:active {
+        color: $text-white;
+        background-color: $secondary-pink;
+    }
+}

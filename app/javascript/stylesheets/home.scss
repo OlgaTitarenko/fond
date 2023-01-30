@@ -1,0 +1,45 @@
+.main {
+    background: linear-gradient(182.94deg, rgba(255, 254, 254, 0.4) 2.45%, rgba(244, 241, 241, 0) 35.25%), linear-gradient(271.33deg, rgba(226, 221, 232, 0.3) 5.87%, rgba(244, 238, 238, 0.156) 50.46%);
+ //   background-image:  url(image-url('Pic.png'));
+    min-height: 100vh;
+    padding-left: 120px;
+
+    &-block {
+        width: 45%;
+    }
+
+   &-title {
+    padding-top: 140px;
+    position: relative;
+    
+
+    h1 {
+        font-size: 96px;
+        position: relative;
+        color: $text-black;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+       
+    }
+   }
+   &-text {
+    padding-top: 76px;
+
+    p {
+        font-size: 18px;
+        color: $text-pink;
+    }
+   }
+   &-buttons {
+       padding-top: 76px;
+       display: flex;
+       a {
+           margin-right: 20px;
+           text-decoration: none;
+       }
+   }
+}

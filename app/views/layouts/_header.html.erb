@@ -1,15 +1,50 @@
-<header class='header'>
-  <nav>
-    <ul>
-      <li>
-        <%= link_to image_tag("001.png", height: 50), {action: 'index', controller: 'welcome'} %>
-      </li>
-      <li>
-        Про нас
-      </li>
-      <li>
-       Підтримати
-      </li>
-    </ul>
-  </nav>
-</header>
+<div class="header">
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg p-0">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-mdb-toggle="collapse"
+      data-mdb-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <!-- Navbar brand -->
+      <a class="navbar-brand mt-2 mt-lg-0 header_logo"  href="#">
+        <%= image_tag("Logo") %>
+      </a>
+
+
+        <ul class="header_nav navbar-nav mr-auto d-flex flex-row-reverse justify-content-end align-items-center">
+          <li class="nav-item ">
+            <%= link_to "Про нас", '#', :class => "nav-link" %>
+          </li>
+           <li class="nav-item ">
+             <%= link_to "Проекти", '#', :class => "nav-link" %>
+          </li>
+          <li class="nav-item ">
+             <%= link_to "Кому допомогли", '#', :class => "nav-link" %>
+          </li>
+           <li class="nav-item ">
+           <%= link_to "Команда", '#', :class => "nav-link" %>
+          </li>
+           <li class="nav-item ">
+           <%= link_to "Контакти", '#', :class => "nav-link" %>
+          </li>
+        </ul>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->
+</div>
