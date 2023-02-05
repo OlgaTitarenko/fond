@@ -4,21 +4,28 @@
 // $body-color: #111;
 
 @import '~bootstrap/scss/bootstrap';
+// @import '/swiper/css';
+// @import '~swiper/css/navigation';
+// @import '~swiper/css/pagination';
 @import 'colors';
 @import 'header';
 @import 'home';
+
 
 .textHeader {
     font-size: 40px;
 }
 .textTitle {
-    font-size: 36px;
+    font-size: 64px;
+    color: $text-black;
 }
 .textSubtitle {
-    font-size: 24px;
+    font-size: 36px;
+    color: $text-dark-gray;
 }
 .textBody1 {
-    font-size: 15px;
+    font-size: 18px;
+    color: $text-black;
 }
 .textBody2 {
     font-size: 13px;
@@ -57,4 +64,24 @@
         color: $text-white;
         background-color: $secondary-pink;
     }
+}
+
+.titleBrush {
+    position: relative;
+
+    img {
+        position: absolute;
+    }
+    h2 {
+        position: relative;
+    }
+}
+
+.homeInfo {
+    padding-top: 56px;
+    padding-bottom: 100px;
+    color: $text-pink;
+    font-size: 18px;
+    width: 672px;
+    margin: 0 auto;
 }
