@@ -152,49 +152,46 @@
         Організації, які нас підтримують
       </h2>
     </div>
-    
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <%= link_to '#'  do %>
+            <%= image_tag("home/carousel/azuleta_logo") %>
+          <% end %>      
+        </div>
+        <div class="swiper-slide">
+          <%= link_to '#'  do %>
+            <%= image_tag("home/carousel/Goodacity") %>
+          <% end %>      
+        </div>
+        <div class="swiper-slide">
+          <%= link_to '#'  do %>
+            <%= image_tag("home/carousel/nebo") %>
+          <% end %>      
+        </div>
+        <div class="swiper-slide">
+          <%= link_to '#'  do %>
+            <%= image_tag("home/carousel/vidrodzhennia") %>
+          <% end %>      
+        </div>
+        <div class="swiper-slide">
+          <%= link_to '#'  do %>
+            <%= image_tag("home/carousel/yarn-slava") %>
+          <% end %>      
+        </div>
+      </div>
+      <div class="next">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20" fill="none">
+          <path d="M0.881279 0.923027C0.539574 1.26473 0.539574 1.81876 0.881279 2.16046L8.72085 10.0001L0.881279 17.8397C0.539574 18.1814 0.539574 18.7354 0.881279 19.0771C1.22298 19.4188 1.77701 19.4188 2.11871 19.0771L10.577 10.6188C10.9187 10.277 10.9187 9.72311 10.577 9.38139L2.11871 0.923027C1.77701 0.581322 1.22298 0.581322 0.881279 0.923027Z" fill="#E77584"/>
+        </svg>
+      </div>
+      <div class="prev">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20" fill="none">
+          <path d="M10.1188 0.923027C10.4605 1.26473 10.4605 1.81876 10.1188 2.16046L2.27918 10.0001L10.1188 17.8397C10.4605 18.1814 10.4605 18.7354 10.1188 19.0771C9.77705 19.4188 9.22311 19.4188 8.8814 19.0771L0.423027 10.6188C0.0813218 10.277 0.0813218 9.72311 0.423027 9.38139L8.8814 0.923027C9.22311 0.581322 9.77705 0.581322 10.1188 0.923027Z" fill="#E77584"/>
+        </svg>
+      </div>
     </div>
-    <div class="swiper-pagination"></div>
   </div>
-
-<!-- Slider main container -->
-<%# <div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-   
-  </div>
-
-  <!-- If we need navigation buttons -->
-   <div class="prev">
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20" fill="none">
-      <path d="M10.1188 0.923027C10.4605 1.26473 10.4605 1.81876 10.1188 2.16046L2.27918 10.0001L10.1188 17.8397C10.4605 18.1814 10.4605 18.7354 10.1188 19.0771C9.77705 19.4188 9.22311 19.4188 8.8814 19.0771L0.423027 10.6188C0.0813218 10.277 0.0813218 9.72311 0.423027 9.38139L8.8814 0.923027C9.22311 0.581322 9.77705 0.581322 10.1188 0.923027Z" fill="#E77584"/>
-    </svg>
-
-  </div>
-  <div class="next">
-    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="20" viewBox="0 0 11 20" fill="none">
-      <path d="M0.881279 0.923027C0.539574 1.26473 0.539574 1.81876 0.881279 2.16046L8.72085 10.0001L0.881279 17.8397C0.539574 18.1814 0.539574 18.7354 0.881279 19.0771C1.22298 19.4188 1.77701 19.4188 2.11871 19.0771L10.577 10.6188C10.9187 10.277 10.9187 9.72311 10.577 9.38139L2.11871 0.923027C1.77701 0.581322 1.22298 0.581322 0.881279 0.923027Z" fill="#E77584"/>
-    </svg>
-  </div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div> %>
-
-  </div>
+  
 </main>

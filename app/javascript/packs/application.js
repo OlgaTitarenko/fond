@@ -7,6 +7,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("bootstrap")
+
 import "../stylesheets/application";
 document.addEventListener("turbolinks:load", function() {
     $(function () {
@@ -22,15 +24,25 @@ document.addEventListener("turbolinks:load", function() {
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
+import Swiper, { Navigation } from 'swiper';
 
-import Swiper from 'swiper';
+Swiper.use([Navigation]);
 
+import 'swiper/swiper-bundle.css';
 
-const swiper = new Swiper(".mySwiper", {
-    slidesPerView: "auto",
-    spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
+let swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 100,
+    speed: 500,
+    autoplay: true,
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
     },
-  });
+    navigation: {
+        nextEl: ".next",
+        prevEl: ".prev",
+      },
+   });
+
+console.log(swiper)
