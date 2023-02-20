@@ -6,9 +6,12 @@
 @import '~bootstrap/scss/bootstrap';
 @import 'colors';
 @import 'header';
+@import 'footer';
 @import 'home';
 
-
+a {
+    text-decoration: none;
+}
 .textHeader {
     font-size: 40px;
 }
@@ -81,4 +84,20 @@
     font-size: 18px;
     width: 672px;
     margin: 0 auto;
+}
+
+@media( max-width: 1220px) {
+    .button,
+    .button-secondary {
+        padding: 15px 20px;
+    }
+    .textTitle {
+        font-size: 36px;
+    }
+    .textBody1 {
+        font-size: 15px;
+    }
+    .titleBrush img {
+        width: 25%;            
+    }
 }

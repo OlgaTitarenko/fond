@@ -33,3 +33,23 @@
         }
     }
 }
+@media( max-width: 1300px) {
+    .header {
+        padding: 0 50px;
+    }
+}
+@media( max-width: 1130px) {
+    .header {
+        &_logo {
+            height: 100px;
+            width: 100px;
+        }
+        &_nav {
+            height: 80px;
+
+            li {
+                margin-left: 45px;
+            }
+        }
+    }
+}

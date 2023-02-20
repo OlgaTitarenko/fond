@@ -24,17 +24,17 @@ document.addEventListener("turbolinks:load", function() {
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Navigation, Pagination } from 'swiper';
 
 Swiper.use([Navigation]);
+Swiper.use([Pagination]);
 
 import 'swiper/swiper-bundle.css';
 
 let swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 100,
-    speed: 500,
-    autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
     autoplay: {
         delay: 1000,
         disableOnInteraction: false,
@@ -42,7 +42,29 @@ let swiper = new Swiper(".mySwiper", {
     navigation: {
         nextEl: ".next",
         prevEl: ".prev",
-      },
-   });
+    },
+    breakpoints: {
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 100,
+        },
+    },
+});
 
-console.log(swiper)
+let ourSwiter = new Swiper(".organizationSwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    loop: true,
+    autoplay: {
+        delay: 1000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+});
