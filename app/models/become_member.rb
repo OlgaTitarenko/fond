@@ -1,0 +1,2 @@
+class BecomeMember < ApplicationRecord
+end

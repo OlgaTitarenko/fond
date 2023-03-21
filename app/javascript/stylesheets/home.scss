@@ -38,6 +38,7 @@
         p {
             font-size: 18px;
             color: $text-pink;
+            line-height: 31px;
         }
     }
 
@@ -233,6 +234,7 @@
                 padding-top: 70px;
                 width: 328px;
                 text-align: center;
+                line-height: 31px;
             }
         }
     }
@@ -277,6 +279,7 @@
         margin: 0 auto;
         padding-top: 56px;
         color: $text-pink;
+        line-height: 31px;
     }
 
     &>img {
@@ -440,16 +443,11 @@
             padding-left: 20px;
             padding-right: 20px;
         }
-        // &-title {
-        //     -webkit-box-shadow: inset 1px -48px 78px 30px rgba(255,255,255,1);
-        //     -moz-box-shadow: inset 1px -48px 78px 30px rgba(255,255,255,1);
-        //     box-shadow: inset 1px -48px 78px 30px rgba(255,255,255,1);
-        
-        // }
     }
     .homeInfo{
         width: 100% !important;
         padding: 0 20px;
+        line-height: 31px;
     }
 }
 

@@ -1,0 +1,62 @@
+<%= form_with(model: become_member, local: true) do |form| %>
+  <% if become_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(become_member.errors.count, "error") %> prohibited this become_member from being saved:</h2>
+
+      <ul>
+        <% become_member.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone %>
+    <%= form.number_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distinct %>
+    <%= form.text_field :distinct %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :coordinator %>
+    <%= form.check_box :coordinator %>
+  </div>
+
+  <div class="field">
+    <%= form.label :knitt %>
+    <%= form.check_box :knitt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :meetings %>
+    <%= form.check_box :meetings %>
+  </div>
+
+  <div class="field">
+    <%= form.label :other %>
+    <%= form.text_area :other %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

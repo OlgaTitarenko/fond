@@ -1,0 +1,20 @@
+.becomeMemberPage {
+    padding: 84px;
+
+    &-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+            margin-bottom: 30px;
+        }
+        h1 {
+            font-style: normal;
+            font-weight: 700;
+            font-size: 64px;
+            line-height: 68px;
+            color: $text-dark-gray;
+        }
+    }
+}
