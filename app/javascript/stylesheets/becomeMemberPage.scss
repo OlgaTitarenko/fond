@@ -17,4 +17,18 @@
             color: $text-dark-gray;
         }
     }
+    &-form {
+        width: 558px;
+        margin: 0 auto;
+        padding-top: 56px;
+
+        .field {
+            display: flex;
+            flex-direction: column;
+            
+            label {
+
+            }
+        }
+    }
 }

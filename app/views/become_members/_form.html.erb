@@ -12,51 +12,48 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name, "Прізвище та ім’я" %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :email, 'Електронна адреса' %>
     <%= form.text_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :phone %>
+    <%= form.label :phone, 'Номер телефону' %>
     <%= form.number_field :phone %>
   </div>
 
   <div class="field">
-    <%= form.label :distinct %>
+    <%= form.label :distinct, "Місце проживання" %>
     <%= form.text_field :distinct %>
-  </div>
-
-  <div class="field">
-    <%= form.label :city %>
     <%= form.text_field :city %>
   </div>
+  
+  <p>Готовий допомагати як:</p>
 
   <div class="field">
-    <%= form.label :coordinator %>
     <%= form.check_box :coordinator %>
+    <%= form.label :coordinator, 'Волонтер-координатор' %>
   </div>
 
   <div class="field">
-    <%= form.label :knitt %>
     <%= form.check_box :knitt %>
+    <%= form.label :knitt, 'Волонтерство в’язанням' %>
   </div>
 
   <div class="field">
-    <%= form.label :meetings %>
     <%= form.check_box :meetings %>
+    <%= form.label :meetings, 'Волонтер на заходах фонду' %>
   </div>
 
   <div class="field">
-    <%= form.label :other %>
     <%= form.text_area :other %>
   </div>
 
-  <div class="actions">
+  <div class="actions button">
     <%= form.submit %>
   </div>
 <% end %>
