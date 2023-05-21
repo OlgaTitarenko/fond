@@ -4,7 +4,7 @@ class CreateBecomeMembers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :email
       t.integer :phone
-      t.string :distinct
+      t.string :state
       t.string :city
       t.boolean :coordinator
       t.boolean :knitt

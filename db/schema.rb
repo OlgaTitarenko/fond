@@ -10,18 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_03_19_194336) do
+ActiveRecord::Schema.define(version: 2023_04_26_151056) do
 
   create_table "become_members", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.integer "phone"
-    t.string "distinct"
+    t.string "state"
     t.string "city"
     t.boolean "coordinator"
     t.boolean "knitt"
     t.boolean "meetings"
     t.text "other"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "members", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "state"
+    t.string "city"
+    t.string "coordinator"
+    t.string "knit"
+    t.string "mettings"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

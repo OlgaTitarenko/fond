@@ -12,7 +12,8 @@ class BecomeMembersController < ApplicationController
 
   # GET /become_members/new
   def new
-    @become_member = BecomeMember.new
+    @become_member = BecomeMember.new 
+    # @address = BecomeMember.new become_member_params
   end
 
   # GET /become_members/1/edit
@@ -65,6 +66,6 @@ class BecomeMembersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def become_member_params
-      params.require(:become_member).permit(:name, :email, :phone, :distinct, :city, :coordinator, :knitt, :meetings, :other)
+      params.require(:become_member).permit(:name, :email, :phone, :state, :city, :coordinator, :knitt, :meetings, :other)
     end
 end

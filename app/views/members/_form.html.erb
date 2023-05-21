@@ -1,17 +1,8 @@
-<%= form_with(model: become_member, local: true) do |form| %>
- <div data-controller="form-element">
-  <% if become_member.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(become_member.errors.count, "error") %> prohibited this become_member from being saved:</h2>
+<%= form_with(model: member, data: {controller: "form-reset"}) do |form| %>
+ <div data-controller="form-element" >
 
-      <ul>
-        <% become_member.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
+    <%= form.button "Validate", formaction: new_member_path, formmethod: :get, data: {form_element_target: "submitbtn", turbo_frame: :dynamic_fields} %>
+    
   <div class="field">
     <%= form.label :name, "Прізвище та ім’я" %>
     <%= form.text_field :name, placeholder: "Введіть текст...", class: "input" %>
@@ -26,12 +17,13 @@
     <%= form.label :phone, 'Номер телефону' %>
     <%= form.number_field :phone, placeholder: "+38 000 000 00 00", class: "input"  %>
   </div>
-    <div class="field">
-      <%= form.label :state, "Місце проживання" %>
-      <%= form.select :state,  become_member.states.invert, {prompt: "Вибрати область"}, {class:'form-select'} %>
-      <%= form.select :city, become_member.cities, {prompt:"Вибрати населений пункт", class:'form-select'},  {include_blank: true}, {} %>
-    </div>
 
+   <div class="field">
+      <%= form.label :state, "Місце проживання" %>
+      <%= form.select :state,  member.states.invert, {prompt: "Вибрати область"}, { :onchange => "this.form.requestSubmit();"}  %>
+      <%= form.select :city, member.cities, {prompt:"Вибрати населений пункт"},  {include_blank: true} %>
+    </div>
+   
   <p>Готовий допомагати як:</p>
 
   <div class="field">
@@ -53,8 +45,11 @@
     <%= form.text_area :other %>
   </div>
 
-  <div class="actions button">
+</div>
+ 
+    <div class="actions button">
     <%= form.submit %>
   </div>
- </div>
+ 
+
 <% end %>
