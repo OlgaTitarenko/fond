@@ -1,8 +1,10 @@
 <%= form_with(model: member, data: {controller: "form-reset"}) do |form| %>
  <div data-controller="form-element" >
-
-    <%= form.button "Validate", formaction: new_member_path, formmethod: :get, data: {form_element_target: "submitbtn", turbo_frame: :dynamic_fields} %>
-    
+    <% if member.errors.any? %>
+    <div id="error_explanation">
+      <h2> Заповніть, будь ласка, форму</h2>
+    </div>
+  <% end %>
   <div class="field">
     <%= form.label :name, "Прізвище та ім’я" %>
     <%= form.text_field :name, placeholder: "Введіть текст...", class: "input" %>
@@ -20,35 +22,37 @@
 
    <div class="field">
       <%= form.label :state, "Місце проживання" %>
-      <%= form.select :state,  member.states.invert, {prompt: "Вибрати область"}, { :onchange => "this.form.requestSubmit();"}  %>
-      <%= form.select :city, member.cities, {prompt:"Вибрати населений пункт"},  {include_blank: true} %>
+      <%= form.select :state,  member.state_opts, {prompt: "Вибрати область"}, {class:'form-select input mb-16'} %>
+       <%= form.text_field :city, placeholder: "Введіть населений пункт",  class: "input"  %>
+      <%# <%= form.select :state,  member.states.invert, {prompt: "Вибрати область"}, { :onchange => "this.form.requestSubmit();"}  %>
+      <%# <%= form.select :city, member.cities, {prompt:"Вибрати населений пункт"},  {include_blank: true} %> 
     </div>
    
-  <p>Готовий допомагати як:</p>
+  <p class="textInfo">Готовий допомагати як:</p>
 
-  <div class="field">
+  <div class="field field-check display-f flex-row align-items-center">
     <%= form.check_box :coordinator %>
     <%= form.label :coordinator, 'Волонтер-координатор' %>
   </div>
 
-  <div class="field">
+  <div class="field field-check display-f flex-row align-items-center">
     <%= form.check_box :knitt %>
     <%= form.label :knitt, 'Волонтерство в’язанням' %>
   </div>
 
-  <div class="field">
+  <div class="field field-check display-f flex-row align-items-center">
     <%= form.check_box :meetings %>
     <%= form.label :meetings, 'Волонтер на заходах фонду' %>
   </div>
 
   <div class="field">
-    <%= form.text_area :other %>
+    <%= form.text_field :other, placeholder: "Інше...", class: "input"  %>
   </div>
 
 </div>
  
     <div class="actions button">
-    <%= form.submit %>
+    <%= form.submit "Надіслати" %>
   </div>
  
 

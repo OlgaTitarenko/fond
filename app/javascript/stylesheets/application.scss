@@ -20,6 +20,16 @@ body, p, ol, ul, td {
 }
 a {
     text-decoration: none;
+   
+    &:hover, 
+    &:visited {
+        color: $secondary-pink;
+        background-color: inherit;
+    }
+    &:active {
+        color: $secondary-pink;
+        background-color: inherit;
+    } 
 }
 .textHeader {
     font-size: 40px;
@@ -80,6 +90,13 @@ a {
     }
     &:visited {
         color: rgba(250, 245, 245, 0.9);
+    }
+    input {
+        background-color: inherit;
+        color: inherit;
+        border: none;
+        display: flex;
+        justify-content: center;
     }
 
 }
@@ -149,7 +166,15 @@ a {
         border: 1px solid #EE2C2C;
     }
 }
-
+.mr-36 {
+    margin-right: 36px;
+}
+.mb-36 {
+    margin-bottom: 36px;
+}
+.mb_16 {
+    margin-bottom: 16px;
+}
 @media( max-width: 1220px) {
     .button,
     .button-secondary {

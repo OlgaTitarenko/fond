@@ -1,5 +1,8 @@
-<h1>New Member</h1>
-
-<%= render 'form', member: @member %>
-
-<%= link_to 'Back', members_path %>
+<div class="becomeMemberPage">
+    <div class="becomeMemberPage-header">
+        <%= image_tag("knit") %>
+        <h1 class="text-center">Анкета волонтера</h1>
+    </div>
+    <div class="becomeMemberPage-form">
+    <%= render 'form', member: @member %>
+</div>
