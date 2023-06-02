@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Become Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Distinct</th>
+      <th>City</th>
+      <th>Coordinator</th>
+      <th>Knitt</th>
+      <th>Meetings</th>
+      <th>Other</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @become_members.each do |become_member| %>
+      <tr>
+        <td><%= become_member.name %></td>
+        <td><%= become_member.email %></td>
+        <td><%= become_member.phone %></td>
+        <td><%= become_member.distinct %></td>
+        <td><%= become_member.city %></td>
+        <td><%= become_member.coordinator %></td>
+        <td><%= become_member.knitt %></td>
+        <td><%= become_member.meetings %></td>
+        <td><%= become_member.other %></td>
+        <td><%= link_to 'Show', become_member %></td>
+        <td><%= link_to 'Edit', edit_become_member_path(become_member) %></td>
+        <td><%= link_to 'Destroy', become_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Become Member', new_become_member_path %>

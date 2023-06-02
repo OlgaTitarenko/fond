@@ -4,14 +4,32 @@
 // $body-color: #111;
 
 @import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
+
 @import 'colors';
 @import 'header';
 @import 'footer';
 @import 'home';
 @import 'help';
+@import 'becomeMemberPage';
 
+
+body, p, ol, ul, td {
+    font-family: "Zen Kaku Gothic New variant1", Tofu;
+}
 a {
     text-decoration: none;
+   
+    &:hover, 
+    &:visited {
+        color: $secondary-pink;
+        background-color: inherit;
+    }
+    &:active {
+        color: $secondary-pink;
+        background-color: inherit;
+    } 
 }
 .textHeader {
     font-size: 40px;
@@ -27,6 +45,7 @@ a {
 .textBody1 {
     font-size: 18px;
     color: $text-black;
+    line-height: 31px;
 }
 .textBody2 {
     font-size: 13px;
@@ -35,7 +54,7 @@ a {
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
-    line-height: 20px;
+    line-height: 31px;
     color: $text-gray;
 }
 .textCode {
@@ -68,6 +87,16 @@ a {
     &:active {
         color: $text-white;
         background-color: $secondary-pink;
+    }
+    &:visited {
+        color: rgba(250, 245, 245, 0.9);
+    }
+    input {
+        background-color: inherit;
+        color: inherit;
+        border: none;
+        display: flex;
+        justify-content: center;
     }
 
 }
@@ -107,8 +136,45 @@ a {
     font-size: 18px;
     width: 672px;
     margin: 0 auto;
+    line-height: 31px;
 }
 
+.input {
+    background: $background-pink;
+    padding: 20px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: $text-dark-gray;
+    border: none;
+    border-radius: 12px;
+
+    &:hover {
+        border: 1px solid #F1D6DB;
+    }
+    &:active {
+        background: #FCFAFB;
+        color: $text-dark-gray;
+        border: 1px solid #F1D6DB;
+    }
+    &::placeholder {
+        color: #b69292;   
+    }
+    &_error {
+        color: #EE2C2C;
+        border: 1px solid #EE2C2C;
+    }
+}
+.mr-36 {
+    margin-right: 36px;
+}
+.mb-36 {
+    margin-bottom: 36px;
+}
+.mb_16 {
+    margin-bottom: 16px;
+}
 @media( max-width: 1220px) {
     .button,
     .button-secondary {

@@ -1,0 +1,59 @@
+<%= form_with(model: member, data: {controller: "form-reset"}) do |form| %>
+ <div data-controller="form-element" >
+    <% if member.errors.any? %>
+    <div id="error_explanation">
+      <h2> Заповніть, будь ласка, форму</h2>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= form.label :name, "Прізвище та ім’я" %>
+    <%= form.text_field :name, placeholder: "Введіть текст...", class: "input" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email, 'Електронна адреса' %>
+    <%= form.text_field :email, placeholder: "yourmail@gmail.com",  class: "input"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phone, 'Номер телефону' %>
+    <%= form.number_field :phone, placeholder: "+38 000 000 00 00", class: "input"  %>
+  </div>
+
+   <div class="field">
+      <%= form.label :state, "Місце проживання" %>
+      <%= form.select :state,  member.state_opts, {prompt: "Вибрати область"}, {class:'form-select input mb-16'} %>
+       <%= form.text_field :city, placeholder: "Введіть населений пункт",  class: "input"  %>
+      <%# <%= form.select :state,  member.states.invert, {prompt: "Вибрати область"}, { :onchange => "this.form.requestSubmit();"}  %>
+      <%# <%= form.select :city, member.cities, {prompt:"Вибрати населений пункт"},  {include_blank: true} %> 
+    </div>
+   
+  <p class="textInfo">Готовий допомагати як:</p>
+
+  <div class="field field-check display-f flex-row align-items-center">
+    <%= form.check_box :coordinator %>
+    <%= form.label :coordinator, 'Волонтер-координатор' %>
+  </div>
+
+  <div class="field field-check display-f flex-row align-items-center">
+    <%= form.check_box :knitt %>
+    <%= form.label :knitt, 'Волонтерство в’язанням' %>
+  </div>
+
+  <div class="field field-check display-f flex-row align-items-center">
+    <%= form.check_box :meetings %>
+    <%= form.label :meetings, 'Волонтер на заходах фонду' %>
+  </div>
+
+  <div class="field">
+    <%= form.text_field :other, placeholder: "Інше...", class: "input"  %>
+  </div>
+
+</div>
+ 
+    <div class="actions button">
+    <%= form.submit "Надіслати" %>
+  </div>
+ 
+
+<% end %>
