@@ -1,6 +1,8 @@
 class MembersController < ApplicationController
+  before_action :authenticate_admin!, except: [:new]
   before_action :set_member, only: %i[ show edit update destroy ]
   skip_before_action :verify_authenticity_token
+
   # GET /members or /members.json
   def index
     @members = Member.all
