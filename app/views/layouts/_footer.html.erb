@@ -38,7 +38,7 @@
             <%= link_to "Контакти", '#' %>
             <% if admin_signed_in? %>
               <%= link_to 'Вийти', destroy_admin_session_path, :method => :delete %>
-              <%= link_to 'Реєстрація', new_admin_registration_path %>
+              <%= link_to 'Адміністратори', admins_path %>
               <%= link_to 'Анкети', members_path %>
           <% end %>
         </div>
