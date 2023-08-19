@@ -1,0 +1,42 @@
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
+
+<h1>Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>State</th>
+      <th>City</th>
+      <th>Coordinator</th>
+      <th>Knit</th>
+      <th>Mettings</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @members.each do |member| %>
+      <tr>
+        <td><%= member.name %></td>
+        <td><%= member.email %></td>
+        <td><%= member.phone %></td>
+        <td><%= member.state %></td>
+        <td><%= member.city %></td>
+        <td><%= member.coordinator %></td>
+        <td><%= member.knit %></td>
+        <td><%= member.mettings %></td>
+        <td><%= link_to 'Show', member %></td>
+        <td><%= link_to 'Edit', edit_member_path(member) %></td>
+        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Member', new_member_path %>

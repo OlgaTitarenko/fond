@@ -1,0 +1,54 @@
+<footer class="footer">
+  <div class="d-flex justify-content-between mb-36">
+    <div class="footer-item">
+      <p class="footer-title mb-36">Ми в соціальних мережах:</p>
+      <div class="d-flex footer-links">
+        <%= link_to 'https://www.instagram.com/charivnyci_dobra/'  do %>
+          <%= image_tag("Icon_instagram") %>
+        <% end %> 
+        <%= link_to 'https://www.facebook.com/charivnycidobra/'  do %>
+          <%= image_tag("Icon_Facebook") %>
+        <% end %>  
+      </div>
+    </div>
+
+    <div class="footer-item">
+      <p class="footer-title">Наші контакти:</p>
+      <div class="d-flex flex-column footer-text">
+        <%= link_to 'tel:+380 93 785 9415'  do %>
+          <%= image_tag("phone") %> +380 93 785 9415
+        <% end %> 
+        <%= link_to 'mailto:charivnyci.dobra.2022@gmail.com'  do %>
+          <%= image_tag("mail") %> charivnyci.dobra.2022@gmail.com
+        <% end %> 
+      </div>
+    </div>
+
+    <div class="footer-item">
+      <p class="footer-title">Меню:</p>
+      <div class="d-flex">
+        <div class="d-flex flex-column footer-text mr-36">
+            <%= link_to "Головна", home_path %>
+            <%= link_to "Про нас", '#' %>
+            <%= link_to "Проєкти", '#' %>
+        </div>
+        <div class="d-flex flex-column footer-text">
+            <%= link_to "Кому допомогли", '#' %>
+            <%= link_to "Команда", '#' %>
+            <%= link_to "Контакти", '#' %>
+            <% if admin_signed_in? %>
+              <%= link_to 'Вийти', destroy_admin_session_path, :method => :delete %>
+              <%= link_to 'Адміністратори', admins_path %>
+              <%= link_to 'Анкети', members_path %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom footer-title d-flex">
+    <p>2022, Благодійна організація “Благодійний фонд “ЧАРІВНИЦІ ДОБРА”</p>
+    <p>код ЄДРПОУ 44753728</p>
+    <p>неприбуткова організаців, від 16.07.2022</p>
+  </div>
+</footer>

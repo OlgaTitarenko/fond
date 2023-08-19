@@ -4,24 +4,73 @@
 // $body-color: #111;
 
 @import '~bootstrap/scss/bootstrap';
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap');
+
 @import 'colors';
 @import 'header';
+@import 'footer';
 @import 'home';
+@import 'help';
+@import 'becomeMemberPage';
 
+
+body, p, ol, ul, td {
+    font-family: "Zen Kaku Gothic New variant1", Tofu;
+}
+a {
+    text-decoration: none;
+   
+    &:hover, 
+    &:visited {
+        color: $secondary-pink;
+        background-color: inherit;
+    }
+    &:active {
+        color: $secondary-pink;
+        background-color: inherit;
+    } 
+}
 .textHeader {
     font-size: 40px;
 }
 .textTitle {
-    font-size: 36px;
+    font-size: 64px;
+    color: $text-black;
 }
 .textSubtitle {
-    font-size: 24px;
+    font-size: 36px;
+    color: $text-dark-gray;
 }
 .textBody1 {
-    font-size: 15px;
+    font-size: 18px;
+    color: $text-black;
+    line-height: 31px;
 }
 .textBody2 {
     font-size: 13px;
+}
+.textInfo {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 31px;
+    color: $text-gray;
+}
+.textCode {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: $main-pink;
+    margin-bottom: 28px;
+}
+.textDetails {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: $text-gray;
 }
 
 .button {
@@ -38,6 +87,16 @@
     &:active {
         color: $text-white;
         background-color: $secondary-pink;
+    }
+    &:visited {
+        color: rgba(250, 245, 245, 0.9);
+    }
+    input {
+        background-color: inherit;
+        color: inherit;
+        border: none;
+        display: flex;
+        justify-content: center;
     }
 
 }
@@ -56,5 +115,81 @@
     &:active {
         color: $text-white;
         background-color: $secondary-pink;
+    }
+}
+
+.titleBrush {
+    position: relative;
+
+    img {
+        position: absolute;
+    }
+    h2 {
+        position: relative;
+    }
+}
+
+.homeInfo {
+    padding-top: 56px;
+    padding-bottom: 100px;
+    color: $text-pink;
+    font-size: 18px;
+    width: 672px;
+    margin: 0 auto;
+    line-height: 31px;
+}
+
+.input {
+    background: $background-pink;
+    padding: 20px 16px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: $text-dark-gray;
+    border: none;
+    border-radius: 12px;
+
+    &:hover {
+        border: 1px solid #F1D6DB;
+    }
+    &:active {
+        background: #FCFAFB;
+        color: $text-dark-gray;
+        border: 1px solid #F1D6DB;
+    }
+    &::placeholder {
+        color: #b69292;   
+    }
+    &_error {
+        color: #EE2C2C;
+        border: 1px solid #EE2C2C;
+    }
+}
+.mr-36 {
+    margin-right: 36px;
+}
+.mb-36 {
+    margin-bottom: 36px;
+}
+.mb_16 {
+    margin-bottom: 16px;
+}
+.mt_120 {
+    margin-top: 120px;
+}
+@media( max-width: 1220px) {
+    .button,
+    .button-secondary {
+        padding: 15px 20px;
+    }
+    .textTitle {
+        font-size: 36px;
+    }
+    .textBody1 {
+        font-size: 15px;
+    }
+    .titleBrush img {
+        width: 25%;            
     }
 }

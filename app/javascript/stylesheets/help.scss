@@ -1,0 +1,105 @@
+.help {
+    padding: 100px 120px 160px;
+    &-header {
+        margin-bottom: 56px;
+
+        img {
+            margin-left: 12px;
+        }
+    }
+    &-main {
+        padding: 56px;
+        background: $background-pink;
+        border-radius: 24px;
+        display: flex;
+        justify-content: space-between;
+
+        > div {
+            margin-right: 100px;
+        }
+        > div:last-child {
+            margin-right: 0;
+        }
+
+        &-title {
+            border-bottom: 1px solid #D5B3B9;
+            margin-bottom: 16px;
+
+            h2 {
+                margin-bottom: 16px;
+            }
+        }
+        &-info {
+            display: flex;
+        }
+        ol {
+            list-style: none;
+            counter-reset: li-counter;
+            li {
+                counter-increment: li-counter;
+                margin-bottom: 1em;
+                font-weight: 400;
+                font-size: 15px;
+                line-height: 120%;
+                color: #8A8585;
+              }
+              li::before {
+                content: counter(li-counter);
+                color: white;
+                font-weight: bold;
+                width: 20px;
+                height: 20px;
+                background-color: #E77584;
+                border-radius: 50px;
+                display: inline-block;
+                text-align: center;
+                padding: 1px;
+                margin: 10px;
+              }
+        }
+        img {
+            max-width: 200px;
+        }
+
+    }
+
+
+}
+@media (max-width: 1300px) {
+    .help {
+        &-main {
+            background: none;
+            padding: 0;
+            border-radius: 0;
+            flex-direction: column;
+            & > div {
+                padding: 33px;
+                background: $background-pink;
+                border-radius: 24px;
+                margin-bottom: 32px;
+                margin-right: 0;
+                width: 100%;
+            }
+        
+        }
+    }
+}
+@media (max-width: 768px) {
+    .help {
+        padding: 92px 20px;
+        &-header {
+            flex-direction: column-reverse;
+        }
+        &-main {
+           & > div:last-child {
+              .d-flex {
+                flex-direction: column;
+              }
+            ol {
+                padding-left: 0;
+            }
+              
+           }
+        }
+    }
+}
